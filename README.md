@@ -23,8 +23,6 @@ Imagina que eres un explorador espacial que construye un panel de control para t
 
 ## Instrucciones para workshop/taller:
 
-### Instrucciones Paso a Paso
-
 1.  **Preparación del Entorno (con Vite):**
 
     *   Asegúrate de tener Node.js y npm (o yarn) instalados.
