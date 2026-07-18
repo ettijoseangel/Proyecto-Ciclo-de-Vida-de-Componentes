@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
-import "./App.css";
+import Planeta from "./Planeta";
 
 function App() {
   // Estados del panel de control
@@ -50,7 +50,10 @@ function App() {
   const manejarAterrizaje = () => {
     if (combustible > 0) {
       setEstadoNave("Aterrizando");
-      setPlanetasVisitados([...planetasVisitados, `Planeta- ${planetasVisitados.length + 1}`]);
+      setPlanetasVisitados([
+        ...planetasVisitados,
+        `Planeta- ${planetasVisitados.length + 1}`,
+      ]);
     }
   };
 
@@ -80,7 +83,7 @@ function App() {
 
       <button
         onClick={manejarAterrizaje}
-        disabled= {combustible === 0}
+        disabled={combustible === 0}
         style={{ padding: "0.5rem 1rem", cursor: "pointer" }}
       >
         Aterrizar
@@ -89,9 +92,9 @@ function App() {
       {planetasVisitados.length > 0 && (
         <div style={{ marginTop: "2rem" }}>
           <h3>Planetas Visitados:</h3>
-          <ul>
+          <ul style={{ listStyleType: "none", padding: 0 }}>
             {planetasVisitados.map((planeta, index) => (
-              <li key={index}>{planeta}</li>
+              <Planeta key={index} nombre={planeta} /> // <-- Usamos el componente aquí
             ))}
           </ul>
         </div>
