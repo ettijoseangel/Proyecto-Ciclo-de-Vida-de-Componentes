@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import Planeta from "./Planeta";
+import Bitacora from "./Bitacora";
 
 function App() {
   // Estados del panel de control
@@ -99,6 +100,7 @@ function App() {
           </ul>
         </div>
       )}
+      <Bitacora />
     </div>
   );
 }
